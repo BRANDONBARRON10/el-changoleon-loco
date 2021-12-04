@@ -341,6 +341,119 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, fu
         tiles.placeOnTile(enemigofinal, value2)
         tiles.setTileAt(value2, assets.tile`transparency16`)
     }
+    for (let value2 of tiles.getTilesByType(assets.tile`myTile0`)) {
+        enemigofinal = sprites.create(img`
+            . . . . f f f f f . . . . . . . 
+            . . . f 9 9 9 9 9 f . . . . . . 
+            . . f 6 c 6 6 c 9 9 f . . . . . 
+            . c 6 f 6 6 f 6 9 9 f f . . . . 
+            . c 6 f 6 6 f 6 9 9 6 6 f . . . 
+            c 6 9 9 6 6 6 6 9 9 3 6 c . . . 
+            c 6 6 6 6 6 6 6 9 9 3 6 c . f f 
+            c c c c c 6 6 6 9 9 f c . f 9 f 
+            . f 6 6 6 c 6 9 9 f f . . f 9 f 
+            . . f f f f f 9 9 9 9 f . f 9 f 
+            . . . . f 9 9 9 9 9 9 9 f f 9 f 
+            . . . f 9 f f 9 f 9 9 9 9 f f . 
+            . . . f 9 f f 9 f 9 9 9 9 f . . 
+            . . . f 6 3 f 6 3 f f 9 f . . . 
+            . . . f 6 6 3 6 6 3 3 6 f . . . 
+            . . . . f f f f f f f f f . . . 
+            `, SpriteKind.Enemy)
+        animation.runImageAnimation(
+        enemigofinal,
+        [img`
+            . . . . f f f f f . . . . . . . 
+            . . . f 9 9 9 9 9 f . . . . . . 
+            . . f 6 c 6 6 c 9 9 f . . . . . 
+            . c 6 f 6 6 f 6 9 9 f f . . . . 
+            . c 6 f 6 6 f 6 9 9 6 6 f . . . 
+            c 6 9 9 6 6 6 6 9 9 3 6 c . . . 
+            c 6 6 6 6 6 6 6 9 9 3 6 c . . . 
+            c c c c c 6 6 9 9 9 f c . . . . 
+            . f 6 6 6 c 6 9 9 f f . . . . . 
+            . . f f f f f 9 9 9 9 f . . . . 
+            . . . . f f 9 9 9 9 9 9 f . f f 
+            . . . f 9 9 f 9 9 f 9 9 f . 9 f 
+            . . f 9 9 f 9 9 f 9 9 9 f . 9 f 
+            . f 3 6 f 6 3 f 3 3 f 9 f f 9 f 
+            . f 6 6 f 6 6 f 6 6 3 9 f f f f 
+            . . f f f f f f f f f f f f f . 
+            `,img`
+            . . . . f f f f f . . . . . . . 
+            . . . f 9 9 9 9 9 f . . . . . . 
+            . . f 6 6 6 6 9 9 9 f . . . . . 
+            . c 6 f 6 6 f 6 9 9 f f . . . . 
+            . c 6 f 6 6 f 6 9 9 6 6 f . . . 
+            c 6 9 9 6 6 6 6 9 9 3 6 c . . . 
+            c 6 6 6 6 6 6 6 9 9 3 6 c . . . 
+            c c c c c 6 6 9 9 9 f c . . . . 
+            . f 6 6 6 6 9 9 9 f f . . . . . 
+            . . f 9 9 9 f f 9 9 9 f . . . . 
+            . . f f f f f 9 9 9 9 9 f . f f 
+            . . f 6 3 f 9 9 f f 9 9 f . 9 f 
+            . f f 6 6 f 9 f f 9 9 9 f . 9 f 
+            . f f f f f f 9 3 3 f 9 f f 9 f 
+            . f 6 6 f 9 9 9 6 6 3 9 f f f f 
+            . . f f f f f f f f f f f f f . 
+            `,img`
+            . . . . . f f f f f . . . . . . 
+            . . . . f 9 9 9 9 9 f . . . . . 
+            . . . f 6 6 6 6 6 9 9 f . . . . 
+            . . f f f 6 6 f f 6 9 f f . . . 
+            . c 6 6 9 9 6 6 6 6 9 6 6 f . . 
+            . c 6 6 6 6 6 6 6 6 9 6 f f f . 
+            . c 6 c c c c 6 6 6 9 6 f 3 6 f 
+            . . c 6 6 6 6 6 6 9 9 f f 6 6 f 
+            . . . c 6 6 6 6 9 9 f f 9 f f f 
+            . . . . f f f 9 9 f 9 9 9 f . . 
+            . . . . f 9 9 9 9 9 9 9 f f f . 
+            . . . f 9 9 9 9 9 9 f f f 9 f . 
+            . . f f 9 9 9 9 f f f f f 9 f . 
+            . f 3 6 f 9 9 f 3 3 f f f 9 f . 
+            . f 6 6 f 9 9 f 6 6 3 f f f f . 
+            . f f f f f f f f f f f f f . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . f f f f f . . . . . . . 
+            . . . f 9 9 9 9 9 f . . . . . . 
+            . . f 6 6 6 6 9 9 9 f . . . . . 
+            . . f 6 6 6 6 6 9 9 f f . . . . 
+            . c 6 6 6 f f 6 9 9 6 6 f . . . 
+            c 6 9 9 6 6 6 6 9 9 3 6 c . . . 
+            c f f 6 6 c 6 6 9 9 3 6 c . . . 
+            f 6 6 f 9 f f f 9 9 9 f . . . . 
+            f 6 6 f 9 9 9 f f f f f . . . . 
+            f f f f f 9 9 9 9 9 f f . f f . 
+            . f f f 9 f f 9 9 9 f f . 9 f . 
+            . f 3 6 f 9 f f 3 3 f f f 9 f . 
+            . f 6 6 f 9 9 f 6 6 3 f f 9 f . 
+            . f f f f f f f f f f f f f . . 
+            `,img`
+            . . . . f f f f f . . . . . . . 
+            . . . f 9 9 9 9 9 f . . . . . . 
+            . . f 6 6 6 6 9 9 9 f . . . . . 
+            . . f 6 6 f 6 6 9 9 f f . . . . 
+            . c 6 6 6 f 6 6 9 9 6 6 f . . . 
+            c 6 9 9 6 6 6 6 9 9 3 6 c . . . 
+            c 6 6 6 6 c 6 6 9 9 3 6 c . . . 
+            c f f f f 6 6 6 9 9 f c f . . . 
+            . f 3 6 f f f 9 9 9 9 f . . . . 
+            . f 6 6 f 9 f f f 9 9 f . . . . 
+            . . f f f 9 9 9 9 f f f . f f . 
+            . . f 9 9 f 9 9 9 9 f f . 9 f . 
+            . f f 9 9 9 f f f f f f f 9 f . 
+            . f 3 6 f 9 9 f 3 3 f f f 9 f . 
+            . f 6 6 f f 9 9 6 6 3 f f f f . 
+            . f f f f f f f f f f f f f . . 
+            `],
+        200,
+        true
+        )
+        tiles.placeOnTile(enemigofinal, value2)
+        tiles.setTileAt(value2, assets.tile`transparency16`)
+    }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     if (controller.down.isPressed()) {
