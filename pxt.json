@@ -2,7 +2,8 @@
     "name": "EL CHANGOLEON LOCO",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "animation": "*"
     },
     "files": [
         "main.blocks",
